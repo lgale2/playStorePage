@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTOS</title>
+    <link rel="stylesheet" href="./css/style.css">
+  
+    <link href='https://fonts.googleapis.com/css?family=Khand' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Enlaces a los archivos CSS y JavaScript de Alertify -->
+    <link rel="stylesheet" href="./css/alertify.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+
+  </head>
+</head>
+<body>
+
+  <!-- PRINCIPIO DE HEADER -->
+  <header>
+    <!-- NAVEGACION -->
+    <div class="navbar">
+
+         <!---------------BOTON MENU--------------------------->
+         <!-- <a href="#" class="action_btn">Iniciar</a> -->
+         <div class="toggle_btn">
+             <i class="fa-sharp fa-solid fa-bars"></i>
+         </div>
+
+         <!-----------------BOTON MENU------------------------->
+ 
+         <div class="logo">
+            <!-- <a href="#">ultimate</a> -->
+             <i class="fa-solid fa-gamepad" style="color: #ffffff;"></i>
+        </div>
+         <!-- BOTONES DE BUSCAR Y CARRITO DE COMPRA -->
+       
+        <!-- BUSCAR -->
+        <ul class="nav_list">
+            <!-- <div class="buscador">
+                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+            </div> -->
+            
+        <!-- CARRITO DE COMPRA -->
+
+        <div class="carrito_icon">
+            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;">
+            <!-- TOTAL DE ARTICULOS -->
+            <span class="item_total">
+                0
+            </span>
+            </i>
+         
+        </div>
+
+        </ul>
+
+        <!-- 
+
+         -->
+
+        
+        <!-- Redireccionando pantallas -->
+        <ul class="links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#category">Categoria</a></li>
+            <li><a href="index.html#product">Productos disponibles</a></li>
+            <li><a href="#contact">Contactanos</a></li>
+        </ul>
+        <!-- Final redireccionamiento de pantallas -->
+
+        <!-- MENU  -->
+        <div class="dropdown_menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#category">Categoria</a></li>
+            <li><a href="index.html#product">Juegos disponibles</a></li>
+            <li><a href="#contact">Contactanos</a></li>
+        </div>
+       
+        <!-- FINAL MENU -->
+
+    </div>
+    <!-- FINAL NAVEGACION -->
+    </header>
+<!-- FINAL DE HEADER -->
+<main>
+
+<!-- FILTER -->
+<section class="filter">
+  <div class="grid">
+    <div class="div">
+      <label for="buscar"><span><i class="fa-solid fa-magnifying-glass fa-rotate-90"></i></span></label>
+      <input type="text" class="text" id="buscar" placeholder="Buscar articulo" oninput="searchValue()">
+    </div>
+
+
+   
+    <div class="category">
+      <select id="category" onchange="categoryValue()">
+        <option value="">PLATAFORMAS DE CONSOLAS</option>
+        <option value="xbox one">XBOX ONE</option>
+        <option value="gift card (iTunes, roblox, steam)">OTRAS GIFT CARD</option>
+        <option value="xbox gift card">XBOX GIFT CARD</option>
+        <option value="xbox game pass">XBOX GAME PASS</option>
+        <option value="psn gift card">PLAYSTATION GIFT CARD</option>
+        <option value="playstation plus 3 meses">PLAYSTATION PLUS 3 MESES</option>
+        <option value="playstation plus 12 meses">PLAYSTATION PLUS 12 MESES</option>
+        <option value="nintendo gift card">NINTENDO GIFT CARD</option>
+      </select>
+  
+  </div>
+  </div>
+</section>
+
+
+<!-- PRODUCTOS -->
+
+<h1 style="color: white; text-align: center; margin-top: 20px;" id="platformTitle">JUEGOS DISPONIBLES</h1>
+  
+<section class="productos">
+
+
+
+    <section class="productos__centro" id="productosCentro">
+
+
+      <div class="carrito__texto"></div>
+
+      <!-- <div class="producto-list" id="productoList"></div> -->
+     
+
+
+     
+
+    </section>
+
+
+  </section>
+
+
+  <div class="mensaje" id="noResultsMessage">No se encontraron productos que coincidan con la búsqueda.</div>
+
+  <!-- <div class="pagination" id="pagination"> -->
+    <!-- Los botones de paginación se generarán aquí -->
+  <!-- </div> -->
+
+
+<!-- FINAL PRODUCTOS -->
+
+
+
+<!-- CARRITO DE COMPRA -->
+
+<section class="carrito_overlay ">
+  <div class="carritocompra ">
+    <span class="closecarrito">
+      <i class="fa-solid fa-xmark"></i>
+    </span>
+    <h1>LISTA DE ARTICULOS</h1>
+
+    <div class="carrito__center ">
+  
+   
+      <!-- <div class="carrito__item ">
+        <img src="./imagenes/imagenesProducto/fifa23.jpg" alt="">
+        inicio div
+        <div>
+         <h3>FIFA 23</h3>
+         <p class="price">
+          200
+         </p>
+           div cantidad de articulos
+           <div> 
+            <span class="minus">
+              <i class="fa-solid fa-circle-minus" "></i>
+            </span>
+                <p>1</p>
+            <span class="plus">
+              <i class="fa-solid fa-circle-plus" "></i>
+            </span>
+           </div>
+           final cantidad de articulos
+        </div>
+        FINAL DIV
+          remover articulo
+         <div>
+          <span class="remove__item">
+            <i class="fa-solid fa-trash"></i>
+          </span>
+         </div>  final remover articulo
+      </div>
+      final carritoitem -->
+  
+    </div>
+    
+     <!-- final carritocenter  -->
+     <div class="formulario">
+      <h2>Información del Usuario</h2>
+
+     <form id="pedidoForm">
+      <div class="form-group">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" class="form-control" required>
+      </div>
+    
+
+      </form>
+    </div>
+      <!-- inicio remover articulos -->
+   
+      <section>
+        <div class="formasdepago">
+          <h2>FORMAS DE PAGO</h2>
+    
+         <form id="">
+          <div class="form-group">
+          <p>
+            DESPUES DE FINALIZAR EL PEDIDO, DEBE DEPOSITAR EL MONTO TOTAL A UNA DE LAS CUENTAS, Y ENVIAR EL 
+            COMPROBANTE AL NUMERO DE WHATSAPP 0000-0000.
+          </p>
+          
+
+        <p>A CONTINUACIÓN, ENCONTRARÁS LOS NÚMEROS DE CUENTAS DE NUESTROS BANCOS ASOCIADOS:</p>
+        <div class="bank-container">
+          <div class="bank">
+            <p class="bank-info">
+              <span class="bank-name">Banco XYZ</span>
+              <span class="account-number">1234567890</span>
+            </p>
+          </div>
+          <div class="bank">
+            <p class="bank-info">
+              <span class="bank-name">Banco ABC</span>
+              <span class="account-number">9876543210</span>
+            </p>
+          </div>
+    
+          </form>
+        </div>
+      </section>
+
+
+        <div class="carrito__footer">
+          <h2>RESUMEN</h2>
+          <div class="linea-horizontal"></div>
+          <h3>TOTAL :  . . . . . . . . . . . . . . . . . . . . . . LPS.<span class="carrito__total"> 0 </span></h3> 
+
+          <button class="finalizarpedido btn" id="whatsappLink">
+            FINALIZAR PEDIDO
+        </button>
+          <button class="clear__carrito btn">
+              VACIAR CARRITO
+          </button>
+        </div>
+
+       <!-- final remover articulos -->
+
+  </div> 
+  <!-- FINAL DE carritocompra -->
+</section>
+</main>
+<footer class="footer" id="contact">
+ 
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=100088458387496"><i class="fab fa-facebook"></i></a>
+    <a href="https://api.whatsapp.com/send?phone=50498056840"target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+</footer>
+
+
+
+<!-- Botón de flecha -->
+<div class="arrow-button" id="scrollToTop">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+
+<!-- Botón de flecha hacia abajo -->
+<div class="arrow-button down-arrow" id="scrollToBottom">
+  <i class="fas fa-arrow-down"></i>
+</div>
+
+
+
+
+<!-- <script src="./js/productos.js"></script> -->
+<script src="./js/scripts.js"></script>
+<script  src="./js/scriptsProd.js"></script>
+
+
+<script src="alertify.min.js"></script>
+    
+</body>
+</html>
